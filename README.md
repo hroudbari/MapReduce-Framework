@@ -14,7 +14,7 @@ Project 4 - MapReduce Franework using gRPC
 Project Description
 ***********************************************************************************
 In this project, we implemented a simplified MapReduce framework using gRPC. 
-This service will simulate the counting the ocurrences of unique words (keys) 
+This service will simulate the counting the occurrences of unique words (keys) 
 in multiple text files. The framework involves one master (client) and multiple 
 workers (servers) each listening on a unique port on the localhost. The master 
 is able to assign workers either a map task or reduce task to accomplish this 
