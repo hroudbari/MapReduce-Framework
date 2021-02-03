@@ -47,18 +47,18 @@ specific task. The flow of this our MapReduce framework is as follows:
                 / |________|\                        /|_________| \
                /      .      \                      /      .       \
               /       .       \                    /       .        \
- ----------  /        .        \   -------------  /        .         \  ------------
-|          |       ________       |             |      _________       |            |
-|          |      |        |      |   Master    |     |         |      |   Master   |
+ ----------  /        .        \   -------------  /        .         \  ------------  
+|          |       ________       |             |      _________       |            |  
+|          |      |        |      |   Master    |     |         |      |   Master   |  
 |  Master  | ---- |        |----  |(Intermediate| ----|         | ---- | (MapReduce |  
-|          |      | Mapper |      |   State)    |     | Reducer |      |   Ended)   |
-|          |      |        |      |             |     |         |      |            |
- ----------  \    |________|    /  ------------- \     _________     /  ------------
-              \        .       /                  \        .        /
-               \       .      /                    \       .       /
-                \      .     /                      \      .      /
-                   ________                            _________
-                  |        |                          |         |
+|          |      | Mapper |      |   State)    |     | Reducer |      |   Ended)   |  
+|          |      |        |      |             |     |         |      |            |  
+ ----------  \    |________|    /  ------------- \     _________     /  ------------  
+              \        .       /                  \        .        /  
+               \       .      /                    \       .       /  
+                \      .     /                      \      .      /  
+                   ________                            _________  
+                  |        |                          |         |  
                   |        |                          |         |
                   | Mapper |                          | Reducer |
                   |        |                          |         |
@@ -83,7 +83,7 @@ Structure of Submission
 
 Compile & Run Instructions
 *****************************************************************************************
-Please make sure environment is correctly configured.
+Please make sure your environment is correctly configured.
 
   1. In CMakeList.txt, change (VCPKG_HOME "$ENV{HOME}/vcpkg") to where your vcpkg exists.
   2. Export `PATH` variable to point to cmake.
@@ -92,9 +92,8 @@ Please make sure environment is correctly configured.
 To compile and Run:
 
 1. Unzip the submitted zip file
-2. Navigate to ~/DivyaKiran_Kadiyala_p4/build
-3. Run "cmake ; make" to compile the MapReduce framework
-4. Workers (servers): Run ./mr_worker localhost:[port#] in separate terminal tabs to start workers.
-5. Master  (client) :Run ./mrdemo [config.ini file] to start the master.
+2. Run "cmake ; make" to compile the MapReduce framework
+3. Workers (servers): Run ./mr_worker localhost:[port#] in separate terminal tabs to start workers.
+4. Master  (client) :Run ./mrdemo [config.ini file] to start the master.
 
 ******************************************************************************************
