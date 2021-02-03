@@ -39,31 +39,8 @@ specific task. The flow of this our MapReduce framework is as follows:
 (7) Master waits to receive notification from all reducers to declare the end of 
     MapReduce, which is when it can access all output files written by the reducers.
 
-                   ________                            _________                     
-                  |        |                          |         | 
-                  |        |                          |         | 
-                  | Mapper |                          | Reducer |
-                  |        |                          |         |
-                / |________|\                        /|_________| \
-               /      .      \                      /      .       \
-              /       .       \                    /       .        \
- ----------  /        .        \   -------------  /        .         \  ------------  
-|          |       ________       |             |      _________       |            |  
-|          |      |        |      |   Master    |     |         |      |   Master   |  
-|  Master  | ---- |        |----  |(Intermediate| ----|         | ---- | (MapReduce |  
-|          |      | Mapper |      |   State)    |     | Reducer |      |   Ended)   |  
-|          |      |        |      |             |     |         |      |            |  
- ----------  \    |________|    /  ------------- \     _________     /  ------------  
-              \        .       /                  \        .        /  
-               \       .      /                    \       .       /  
-                \      .     /                      \      .      /  
-                   ________                            _________  
-                  |        |                          |         |  
-                  |        |                          |         |
-                  | Mapper |                          | Reducer |
-                  |        |                          |         |
-                  |________|                          |_________|  
-                      
+
+![](MapReduce_Diagram.png)
 
 Structure of Submission
 ****************************************************************************************
