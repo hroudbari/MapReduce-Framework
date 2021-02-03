@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package masterworker;
+
+
+service Masterworker {
+	rpc SendWorkerTask (WorkerTask) returns (WorkerReply) {} 
+}
+
+
+// Mapper (Worker) to Master.
+// In case of Mapper path can be dummy.
+// In case of Reducer path is the output file path.
+message WorkerReply {
+	uint32 id = 1;
+	string status = 2;
+}
+
+
+
+
+message ShardInfo {
+	string filepath = 1;
+	uint32 start_pos = 2;
+	uint32 end_pos = 3;
+	uint32 size = 4;
+}
+
+
+// Master to Worker;
+message WorkerTask{
+	
+	string workertype = 1;
+	uint32 id = 2;
+	string in_dirpath = 3;	// Only Reducer uses this.
+	string out_dirpath = 4;
+	string userid = 5;
+	uint32 n_outfiles = 6;
+	repeated ShardInfo shards = 7; // Only Mapper use this.
+
+}
+
+
+
