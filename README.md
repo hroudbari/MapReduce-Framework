@@ -8,7 +8,7 @@ Divya Kiran Kadiyala (dkadiyala3@gatech.edu)
 
 Advanced Operating Systems
 ***********************************************************************************
-Project 4 - MapReduce infrastructure using gRPC
+Project 4 - MapReduce Franework using gRPC
 
 
 Project Description
